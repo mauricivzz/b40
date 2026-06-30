@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Life is sad</title>
+    <!-- Importando uma fonte moderna e limpa (Inter) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Configurações Globais (Reset) */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg-color: #000000;       /* Preto absoluto */
+            --text-primary: #ffffff;   /* Branco puro */
+            --text-secondary: #888888; /* Cinza para textos secundários */
+            --border-color: #222222;   /* Linhas divisórias sutis */
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Cabeçalho / Menu de Navegação */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2rem 5%;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .logo {
+            font-size: 1.2rem;
+            font-weight: 800;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        nav a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            margin-left: 2rem;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--text-primary);
+        }
+
+        /* Seção Principal (Hero) */
+        .hero {
+            min-height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 0 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 6vw, 5rem); /* Fonte responsiva */
+            font-weight: 800;
+            line-height: 1.1;
+            letter-spacing: -2px;
+            margin-bottom: 2rem;
+        }
+
+        .hero p {
+            font-size: clamp(1rem, 2vw, 1.25rem);
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin-bottom: 3rem;
+            font-weight: 300;
+        }
+
+        /* Botão Minimalista */
+        .btn {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background-color: var(--text-primary);
+            color: var(--bg-color);
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 4px;
+            align-self: flex-start;
+            transition: transform 0.2s ease, opacity 0.2s ease;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            opacity: 0.9;
+        }
+
+        /* Seção de Grid de Conteúdo */
+        .features {
+            padding: 5rem 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .feature-card {
+            padding: 2rem;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            transition: border-color 0.3s ease;
+        }
+
+        .feature-card:hover {
+            border-color: #444444;
+        }
+
+        .feature-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .feature-card p {
+            color: var(--text-secondary);
+            font-weight: 300;
+        }
+
+        /* Rodapé */
+        footer {
+            text-align: center;
+            padding: 3rem 5%;
+            color: var(--text-secondary);
+            font-size: 0.8rem;
+            border-top: 1px solid var(--border-color);
+        }
+
+        /* Responsividade para Celulares */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+            nav a {
+                margin: 0 1rem;
+            }
+            .hero {
+                text-align: center;
+                align-items: center;
+            }
+            .btn {
+                align-self: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Cabeçalho -->
+    <header>
+        <div class="logo">
+    <img src="D:\LS\LOGOB40.png" alt="Logo Minimal" style="height: 120px; width: auto; display: block;">
+</div>
+        <nav>
+            <a href="#sobre">Sobre</a>
+            <a href="#projetos">Projetos</a>
+            <a href="#contato">Contato</a>
+        </nav>
+    </header>
+
+    <!-- Seção de Destaque (Hero) -->
+    <main class="hero">
+        <h1>Pensamentos perturbadores.<br>Conforto no caos.</h1>
+        <p>Crio experiências em jogos para pessoas especiais que pensam estarem sozinhas no mundo. Eu crio ambientes confortáveis para nós.</p>
+        <a href="#projetos" class="btn">Ver Projetos</a>
+    </main>
+
+    <!-- Seção de Recursos/Serviços -->
+    <section class="features" id="projetos">
+        <div class="feature-card">
+            <h3>UI</h3>
+            <p>Interfaces intuitivas.</p>
+        </div>
+        <div class="feature-card">
+            <h3>Desenvolvimento</h3>
+            <p>Códigos, texturas e NPCS otimizados</p>
+        </div>
+        <div class="feature-card">
+            <h3>Branding</h3>
+            <p>A marca b40 é direcionada para um publico um pouco diferente. Espero que entendam!</p>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2026 b40. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>
