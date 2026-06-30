@@ -1,0 +1,200 @@
+html<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato | b40</title>
+    <!-- Importando uma fonte moderna e limpa (Inter) -->
+    <link href="https://googleapis.com" rel="stylesheet">
+    
+    <style>
+        /* Configurações Globais (Reset) */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg-color: #000000;       /* Preto absoluto */
+            --text-primary: #ffffff;   /* Branco puro */
+            --text-secondary: #888888; /* Cinza para textos secundários */
+            --border-color: #222222;   /* Linhas divisórias sutis */
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Cabeçalho / Menu de Navegação */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2rem 5%;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .logo {
+            font-size: 1.2rem;
+            font-weight: 800;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        nav a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            margin-left: 2rem;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--text-primary);
+        }
+
+        /* Área Centralizada de Conteúdo */
+        main {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 4rem 5%;
+        }
+
+        /* Container de Links de Contato */
+        .links-container {
+            width: 100%;
+            max-width: 450px;
+            text-align: center;
+        }
+
+        .links-container h1 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 800;
+            letter-spacing: -1px;
+            margin-bottom: 1rem;
+        }
+
+        .links-container p {
+            color: var(--text-secondary);
+            font-size: 1rem;
+            font-weight: 300;
+            margin-bottom: 3rem;
+        }
+
+        /* Lista de Contatos Minimalista */
+        .contact-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .contact-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.2rem 1.5rem;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            color: var(--text-primary);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .contact-item:hover {
+            border-color: #444444;
+            background-color: #050505;
+            transform: translateY(-2px);
+        }
+
+        .contact-type {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 400;
+        }
+
+        /* Rodapé */
+        footer {
+            text-align: center;
+            padding: 3rem 5%;
+            color: var(--text-secondary);
+            font-size: 0.8rem;
+            border-top: 1px solid var(--border-color);
+        }
+
+        /* Responsividade para Celulares */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+            nav a {
+                margin: 0 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Cabeçalho (Idêntico ao original) -->
+    <header>
+        <div class="logo">
+            <img src="LOGOB40.png" alt="Logo Minimal" style="height: 120px; width: auto; display: block;">
+        </div>
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="index.html#projetos">Projetos</a>
+        </nav>
+    </header>
+
+    <!-- Conteúdo Focado Apenas nos Canais de Contato -->
+    <main>
+        <section class="links-container">
+            <h1>Canais de Contato</h1>
+            <p>Escolha a melhor forma de se conectar.</p>
+            
+            <div class="contact-list">
+                
+                <!-- Link de E-mail -->
+                <a href="mailto:mmauricio.abreu@gmail.com" class="contact-item">
+                    <span>E-mail</span>
+                    <span class="contact-type">e-mail</span>
+                </a>
+
+                <!-- Link do Discord -->
+                <a href="https://discord.gg/XRbaTqMrpk" target="_blank" class="contact-item">
+                    <span>Discord</span>
+                    <span class="contact-type">Lifelover#glemt.</span>
+                </a>
+
+                
+                <!-- Link do Instagram ou outra plataforma -->
+                <a href="https://instagram.com" target="_blank" class="contact-item">
+                    <span>Instagram</span>
+                    <span class="contact-type">@mauricivzz</span>
+                </a>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Rodapé (Idêntico ao original) -->
+    <footer>
+        <p>&copy; 2026 b40. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>
