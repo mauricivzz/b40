@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto | b40</title>
+    <!-- Importando uma fonte moderna e limpa (Inter) -->
+    <link href="https://googleapis.com" rel="stylesheet">
+    
+    <style>
+        /* Configurações Globais (Reset) */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg-color: #000000;       /* Preto absoluto */
+            --text-primary: #ffffff;   /* Branco puro */
+            --text-secondary: #888888; /* Cinza para textos secundários */
+            --border-color: #222222;   /* Linhas divisórias sutis */
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Cabeçalho / Menu de Navegação */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2rem 5%;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .logo {
+            font-size: 1.2rem;
+            font-weight: 800;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        nav a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            margin-left: 2rem;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--text-primary);
+        }
+
+        /* Área Centralizada de Conteúdo */
+        main {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 4rem 5%;
+        }
+
+        /* Container do Projeto (Substituiu os contatos) */
+        .project-container {
+            width: 100%;
+            max-width: 700px; /* Um pouco mais largo para destacar a imagem */
+            text-align: center;
+        }
+
+        .project-container h1 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 800;
+            letter-spacing: -1px;
+            margin-bottom: 1rem;
+        }
+
+        .project-container p {
+            color: var(--text-secondary);
+            font-size: 1rem;
+            font-weight: 300;
+            margin-bottom: 2.5rem;
+        }
+
+        /* Box da Imagem do Projeto */
+        .project-media {
+            width: 100%;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            overflow: hidden;
+            background-color: #050505;
+            transition: border-color 0.3s ease;
+        }
+
+        .project-media:hover {
+            border-color: #444444;
+        }
+
+        .project-media img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+        }
+
+        /* Rodapé */
+        footer {
+            text-align: center;
+            padding: 3rem 5%;
+            color: var(--text-secondary);
+            font-size: 0.8rem;
+            border-top: 1px solid var(--border-color);
+        }
+
+        /* Responsividade para Celulares */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+            nav a {
+                margin: 0 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Cabeçalho (Idêntico ao original) -->
+    <header>
+        <div class="logo">
+            <img src="LOGOB40.png" alt="Logo Minimal" style="height: 120px; width: auto; display: block;">
+        </div>
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="index.html#projetos">Projetos</a>
+            <a href="contato.html">Contato</a>
+        </nav>
+    </header>
+
+    <!-- Conteúdo Focado Apenas no Projeto -->
+    <main>
+        <section class="project-container">
+            <h1>Ambiente de Desenvolvimento</h1>
+            <p>Uma prévia visual do projeto atual em produção.</p>
+            
+            <!-- Espaço da Imagem do Projeto -->
+            <div class="project-media">
+                <!-- Substitua 'IMAGEM_PROJETO.png' pelo nome exato do arquivo de imagem no seu repositório -->
+                <img src="IMAGEM_PROJETO.png" alt="Visualização do Projeto b40">
+            </div>
+        </section>
+    </main>
+
+    <!-- Rodapé (Idêntico ao original) -->
+    <footer>
+        <p>&copy; 2026 b40. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>
